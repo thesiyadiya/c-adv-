@@ -1,0 +1,46 @@
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+	int a;
+	public:
+		void getA();
+		void putA();
+};
+void A::getA()
+{
+	cout<<"Enter a:";
+	cin>>a;
+}
+void A::putA()
+{
+	cout<<"a= "<<a;
+}
+class B:public A
+{
+	int b;
+	public:
+		void getB();
+		void putB();
+};
+void B::getB()
+{
+	cout<<"\n Enter b:";
+	cin>>b;
+}
+void B::putB()
+{
+	cout<<"b= "<<b;
+}
+void main()
+{
+	clrscr();
+	A x;
+	x.getA();
+	x.putA();
+	B y;
+	y.getB();
+	y.putB();
+	getch();
+}
+

@@ -1,0 +1,34 @@
+#include<iostream.h>
+#include<conio.h>
+class A
+{
+	int x,y;
+	public:
+		void set_xy(int a, int b)
+		{
+			x=a;
+			y=b;
+		}
+		friend int sum(A a);
+};
+int sum(A a)
+{
+	int A::*px=&A::x;
+	int A::*py=&A::y;
+	A *pm=&m;
+	int s=a.*px+pm ->*py;
+	return s;
+}
+int main()
+{
+	A n;
+	clrscr();
+	void(A::*pf)(int,int)=&A::set_xy;
+	(n.*pf)(10,20);
+																																																																																																																		 m	cout<<"\n sum="<<sum(n);
+	A* op=&n;
+	(op->8 pf)(30,40);
+	cout<<"\n sum="<<sum(n);
+	getch();
+	return 0;
+}
